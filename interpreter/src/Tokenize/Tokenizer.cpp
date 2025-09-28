@@ -65,16 +65,15 @@ std::vector<std::string> Tokenizer::ReadLines(std::vector<std::string> lines)
 
 bool Tokenizer::ReadTokens(std::vector<std::string> tokens)
 {
-	for (const auto& token : tokens)
+	for (size_t i = 0; i < tokens.size(); ++i)
 	{
+		const auto& token = tokens[i];
 		if (token == "PRINT")
 		{
-			// std::cout << "PRINT STATEMENT FOUND" << std::endl;
 			Executor::print(m_Strings[0]);
 		}
 		else if (token == "END")
 		{
-			// std::cout << "END STATEMENT FOUND" << std::endl;
 			Executor::end();
 		}
 		else if (token == "LET")
@@ -84,8 +83,15 @@ bool Tokenizer::ReadTokens(std::vector<std::string> tokens)
 		}
 		else
 		{
-			// No action for other tokens
+			if (i + 2 < tokens.size())
+			{
+				std::string varName = tokens[i + 1];
+				std::string varValue = tokens[i + 2];
+				Executor::setVariable(varName, varValue);
+				i += 2;
+			}
 		}
+		// ... other tokens
 	}
 	return true;
 }
