@@ -1,6 +1,5 @@
+#include "../Core.h"
 #include "Tokenizer.h"
-#include <iostream>
-#include <vector>
 #include "../Executor/Executor.h"
 
 std::vector<std::string> Tokenizer::m_Strings;
