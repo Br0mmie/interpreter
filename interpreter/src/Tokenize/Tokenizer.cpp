@@ -78,6 +78,11 @@ bool Tokenizer::ReadTokens(std::vector<std::string> tokens)
 			// std::cout << "END STATEMENT FOUND" << std::endl;
 			Executor::end();
 		}
+		else if (token == "LET")
+		{
+			// start of variable found
+
+		}
 		else
 		{
 			// No action for other tokens
