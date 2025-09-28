@@ -24,6 +24,9 @@
     <ClCompile Include="src\Tokenize\Tokenizer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\Executor\Executor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Utils\File.h">
@@ -32,5 +35,11 @@
     <ClInclude Include="src\Tokenize\Tokenizer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\Executor\Executor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
 </Project>
