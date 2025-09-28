@@ -1,6 +1,5 @@
+#include "../Core.h"
 #include "Tokenizer.h"
-#include <iostream>
-#include <vector>
 #include "../Executor/Executor.h"
 
 std::vector<std::string> Tokenizer::m_Strings;
@@ -78,6 +77,11 @@ bool Tokenizer::ReadTokens(std::vector<std::string> tokens)
 			Executor::end();
 		}
 		else if (token == "LET")
+		{
+			// start of variable found
+
+		}
+		else
 		{
 			if (i + 2 < tokens.size())
 			{
