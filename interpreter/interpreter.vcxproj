@@ -131,9 +131,16 @@
     <ClCompile Include="src\Tokenize\Tokenizer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Core.h" />
     <ClInclude Include="src\Executor\Executor.h" />
     <ClInclude Include="src\Utils\File.h" />
     <ClInclude Include="src\Tokenize\Tokenizer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md">
+      <SubType>
+      </SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

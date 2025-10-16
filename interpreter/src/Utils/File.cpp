@@ -1,9 +1,5 @@
+#include "../Core.h"
 #include "File.h"
-#include <filesystem>
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
 
 std::ifstream File::OpenFile(const std::string& filename)
 {
