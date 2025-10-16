@@ -14,3 +14,9 @@ bool Executor::end()
 	printf("\n");
 	return true;
 }
+
+void Executor::setVariable(const std::string& name, const std::string& value)
+{
+	variables[name] = value;
+	std::cout << "VARIABLE SET: " << name << " VALUE: " << value << std::endl;
+}

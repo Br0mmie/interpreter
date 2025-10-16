@@ -11,4 +11,3 @@ public:
 private:
 	static std::vector<std::string> m_Strings;
 };
-
